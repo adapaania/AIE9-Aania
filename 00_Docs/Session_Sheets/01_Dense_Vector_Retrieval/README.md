@@ -29,7 +29,7 @@ In this session, we dig deeper into prototyping LLM applications with Retrieval 
 
 The core **concepts** we'll cover include the big ideas behind RAG. We break down RAG into two constituent components (processes): **in-context learning** and **embedding-based dense vector retrieval**.
 
-The **code** we'll focus on during this session follows the concepts directly. We will develop a RAG application from scratch in pure Python. Starting first with a primer on understanding embeddings, we will proceed to build a custom **vector store**, implement a **similarity search engine**, and put it all together, Pythonically 🐍. You will be asked to enhance your Personal Wellness Assistant. As we will see, there are many ways to do this, even with a simple RAG application.
+The **code** we'll focus on during this session follows the concepts directly. We will develop a RAG application using the LangChain framework and a QDrant vector store. You will be asked to enhance the RAG assistant you build. As we will see, there are many ways to do this! For a deeper dive into first principles, we will also include an "under the hood" Python implementation of RAG from scratch, building out a custom vector store and a similarity search engine, Pythonically 🐍.
 
 # 💬 From Prompt Engineering to RAG
 
