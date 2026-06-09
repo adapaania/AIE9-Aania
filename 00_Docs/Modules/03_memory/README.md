@@ -6,7 +6,7 @@
 - Understand short vs. long term memory in agentic systems and how to manage them
 - Learn the two primary methods for agents to write memories: in the hot path (e.g., during runtime) and in the background
 - Visualize, debug, and interact with your agent applications
-- Understand why knowledge graphs add value to retrieval
+- Understand why knowledge graphs add value to memory
 
 🧰 **New Tools**
 - Visualization, Interaction, and Debugging: [LangSmith Studio](https://docs.langchain.com/langsmith/studio)
