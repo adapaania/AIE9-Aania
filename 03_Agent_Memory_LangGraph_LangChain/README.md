@@ -9,7 +9,7 @@
 
 | 📰 Session Sheet | ⏺️ Recording | 🖼️ Slides | 👨‍💻 Repo | 📝 Homework | 📁 Feedback |
 |:-----------------|:-------------|:----------|:----------|:------------|:------------|
-| Memory and Graph-Enhanced RAG | | | You are here! | | |
+| [Session 3: Agent Memory](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/03_memory) |[Recording!](https://us02web.zoom.us/rec/share/Se_On_Sxl-It_2dP1Uo1cS8XgDM_VxuDhIK5c3viAnVcyybHWc5f4lfntbCZOTDv.hKjpX2JjzbDCfpxR) <br> passcode: `am4=Qgq+`| [Session 3 Slides](https://canva.link/28esllo4r4m0ro9) |You are here! | [Session 3 Assignment](https://forms.gle/Q8f4j6kB4vYViSYNA) | [Feedback 6/9](https://forms.gle/Got49t4zZxX2aR5u7) |
 
 ## Main Assignment
 
