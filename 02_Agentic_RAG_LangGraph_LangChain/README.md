@@ -1,15 +1,14 @@
-<p align = "center" draggable="false" ><img src="https://github.com/AI-Maker-Space/LLM-Dev-101/assets/37101144/d1343317-fa2f-41e1-8af1-1dbb18399719"
-     width="200px"
-     height="auto"/>
-</p>
 
-<h1 align="center" id="heading">Session 2: Agentic RAG with LangGraph and LangChain</h1>
+
+# Session 2: Agentic RAG with LangGraph and LangChain
 
 ### [Quicklinks]()
 
-| 📰 Session Sheet | ⏺️ Recording | 🖼️ Slides | 👨‍💻 Repo | 📝 Homework | 📁 Feedback |
-|:-----------------|:-------------|:----------|:----------|:------------|:------------|
-| [Session 2: Agents](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/02_Agentic_RAG_From_Scratch) |[Recording!](https://us02web.zoom.us/rec/share/QY5jO23FGTCX3yYT_RkogG_aq_BISzHfzN7CcVHP3qeliXKqwBnraUQSNlHtkRUD.OwX79Wfmk0hdy087) <br> passcode: `3fAh&+PM`| [Session 2 Slides](https://canva.link/l06gfshgqhv8svl) | You are here! | [Session 2 Assignment](https://forms.gle/9L3kTpvfJzFoAEDn8) | [Feedback 6/4](https://forms.gle/9L3kTpvfJzFoAEDn8) |
+
+| 📰 Session Sheet                                                                                                                                   | ⏺️ Recording                                                                                                                                           | 🖼️ Slides                                             | 👨‍💻 Repo    | 📝 Homework                                                 | 📁 Feedback                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ | ------------- | ----------------------------------------------------------- | --------------------------------------------------- |
+| [Session 2: Agents](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/02_Agentic_RAG_From_Scratch) | [Recording!](https://us02web.zoom.us/rec/share/QY5jO23FGTCX3yYT_RkogG_aq_BISzHfzN7CcVHP3qeliXKqwBnraUQSNlHtkRUD.OwX79Wfmk0hdy087) passcode: `3fAh&+PM` | [Session 2 Slides](https://canva.link/l06gfshgqhv8svl) | You are here! | [Session 2 Assignment](https://forms.gle/9L3kTpvfJzFoAEDn8) | [Feedback 6/4](https://forms.gle/9L3kTpvfJzFoAEDn8) |
+
 
 ## Main Assignment
 
@@ -110,10 +109,10 @@ git pull upstream main
 git push origin main
 ```
 
-2. Start Cursor from the `02_Agentic_RAG_LangGraph_LangChain` folder.
-3. Complete the notebook questions and activities.
-4. Keep useful notebook outputs that help explain your work, especially graph diagrams and representative agent runs. Remove secrets and excessively noisy outputs.
-5. Add, commit, and push your modified work to your origin repository.
+1. Start Cursor from the `02_Agentic_RAG_LangGraph_LangChain` folder.
+2. Complete the notebook questions and activities.
+3. Keep useful notebook outputs that help explain your work, especially graph diagrams and representative agent runs. Remove secrets and excessively noisy outputs.
+4. Add, commit, and push your modified work to your origin repository.
 
 When submitting your homework, provide the GitHub URL to your AIE9 repo.
 
