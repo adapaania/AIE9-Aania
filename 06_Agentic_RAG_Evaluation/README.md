@@ -5,11 +5,11 @@
 
 <h1 align="center" id="heading">Session 6: Agentic RAG Evaluation</h1>
 
-### [Quicklinks]()
+### [Quicklinks](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_AIEC_Quicklinks)
 
-| Session Sheet | Recording | Slides | Repo | Homework | Feedback |
-|:--------------|:----------|:-------|:-----|:---------|:---------|
-| [Agentic RAG Evaluation](../00_Docs/Session_Sheets/10_Agentic_RAG_Evaluation/README.md) | | | You are here! | | |
+| 📰 Module | ⏺️ Recording | 🖼️ Slides     | 👨‍💻 Repo     | 📝 Homework      | 📁 Feedback       |
+|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|
+| [Session 6: Agentic RAG Evals](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/06_Agentic_RAG_Evaluation) | [Recording!](https://us02web.zoom.us/rec/share/tfvtQxJ1h0CH9NS0s8R1Nh4NFay085xU00aoLbpdFIKBowwl4cYeYRlhPGvr2Xq5.N6Z_BNdvCMfWDBLW) <br> passcode: `g?M4pGu0` | [Session 6 Slides](https://canva.link/kxsdgi5timxi0yt) |You are here! | [Session 6 Assignment](https://forms.gle/ZQB4CfZnfu4kQAWT8) | [Feedback 6/18](https://forms.gle/t1DP8VQLXEgNhYmE6) |
 
 ## Main Assignment
 
