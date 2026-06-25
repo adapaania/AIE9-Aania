@@ -5,6 +5,10 @@
 
 <h1 align="center">Session 7: Advanced Retrievers</h1>
 
+| Module Sheet | Recording     | Slides        | Repo         | Homework      | Feedback       |
+|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|
+| [Session 7: Advanced Retrievers](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/07_Advanced_Retrievers) |[Recording!](https://us02web.zoom.us/rec/share/ZnvAlAg5k1YIMN_AcdBxdF06Dq0-YVfm98gZl13hOoZ9aB4J5csHwL6BptHV7yRv.o9HpmnwpCDDi2ExU) <br> passcode: `7!j49V6e`| [Session 7 Slides](https://canva.link/hq26752cgd4af2a) |You are here! | [Session 7 Assignment](https://forms.gle/AEu4b7eyTQsFtLDN9) | [Feedback 6/23](https://forms.gle/epfFyQqAd4WNmLZm9) |
+
 ## Main Assignment
 
 In this session, you will improve the cat-health RAG application from Session 1
