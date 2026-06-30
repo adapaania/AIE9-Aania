@@ -9,7 +9,7 @@
 
 | Session Sheet | Recording | Slides | Repo | Homework | Feedback |
 |:--------------|:----------|:-------|:-----|:---------|:---------|
-| [MCP Servers](../00_Docs/Session_Sheets/17_MCP_Servers_and_A2A/README.md) | | | You are here! | | |
+| [Session 8: MCP](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/08_MCP) |[Recording!](https://us02web.zoom.us/rec/share/rqw5I5hwbOOHy8TrGjnu0IjDJi53ykHb0k897jYfyHqZpgRhUuFP4A18d4NrcEKS.18sNk6Do9XwyaVUy) <br> passcode: `E56&^V+8`| [Session 8 Slides](https://canva.link/k8cixqgkfeghdsn) |You are here! | [Session 8 Assignment](https://forms.gle/TcjjChq38ydMjuqn8) | [Feedback 6/25](https://forms.gle/DvcWDgBXatBWCXqi7) |
 
 ## Useful Resources
 
@@ -137,7 +137,7 @@ Shout out to @AIMakerspace !
 Feel free to reach out if you're curious or would like to collaborate on similar projects! 🤝🔥
 ```
 
-## Submitting Your Homework [OPTIONAL]
+## Submitting Your Homework 
 
 Follow these steps to prepare and submit your homework assignment:
 
