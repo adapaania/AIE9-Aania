@@ -1,22 +1,24 @@
-<p align="center" draggable="false"><img src="https://github.com/AI-Maker-Space/LLM-Dev-101/assets/37101144/d1343317-fa2f-41e1-8af1-1dbb18399719"
-     width="200px"
-     height="auto"/>
-</p>
-
-<h1 align="center" id="heading">Session 8: Model Context Protocol (MCP)</h1>
+# Session 8: Model Context Protocol (MCP)
 
 ### [Quicklinks]()
 
-| Session Sheet | Recording | Slides | Repo | Homework | Feedback |
-|:--------------|:----------|:-------|:-----|:---------|:---------|
-| [Session 8: MCP](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/08_MCP) |[Recording!](https://us02web.zoom.us/rec/share/rqw5I5hwbOOHy8TrGjnu0IjDJi53ykHb0k897jYfyHqZpgRhUuFP4A18d4NrcEKS.18sNk6Do9XwyaVUy) <br> passcode: `E56&^V+8`| [Session 8 Slides](https://canva.link/k8cixqgkfeghdsn) |You are here! | [Session 8 Assignment](https://forms.gle/TcjjChq38ydMjuqn8) | [Feedback 6/25](https://forms.gle/DvcWDgBXatBWCXqi7) |
+
+| Session Sheet                                                                                                              | Recording                                                                                                                                              | Slides                                                 | Repo          | Homework                                                    | Feedback                                             |
+| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ | ------------- | ----------------------------------------------------------- | ---------------------------------------------------- |
+| [Session 8: MCP](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/08_MCP) | [Recording!](https://us02web.zoom.us/rec/share/rqw5I5hwbOOHy8TrGjnu0IjDJi53ykHb0k897jYfyHqZpgRhUuFP4A18d4NrcEKS.18sNk6Do9XwyaVUy) passcode: `E56&^V+8` | [Session 8 Slides](https://canva.link/k8cixqgkfeghdsn) | You are here! | [Session 8 Assignment](https://forms.gle/TcjjChq38ydMjuqn8) | [Feedback 6/25](https://forms.gle/DvcWDgBXatBWCXqi7) |
+
+
+
 
 ## Useful Resources
 
 **MCP (Model Context Protocol)**
+
 - [MCP Official Docs](https://modelcontextprotocol.io/) — Spec, tutorials, and guides
 - [MCP-UI](https://mcpui.dev/) — Official standard for interactive UI in MCP
 - [MCP Auth Guide (Auth0)](https://auth0.com/blog/mcp-specs-update-all-about-auth/) — Deep dive into MCP auth spec updates
+
+
 
 ## Main Assignment
 
@@ -45,6 +47,8 @@ Available MCP tools:
 - `remove_from_cart`
 - `checkout`
 
+
+
 ## Setup
 
 From this folder:
@@ -58,6 +62,8 @@ Copy the example env file and fill in your OpenAI API key:
 ```bash
 cp .env.example .env
 ```
+
+
 
 ## Running the MCP Server
 
@@ -87,17 +93,25 @@ ISSUER_URL=https://xxxx-xx-xx-xx-xx.ngrok-free.app uv run server.py
 > **Note:** The `ISSUER_URL` must match the public URL clients use to reach the
 > server, otherwise OAuth authentication will fail.
 
+
+
 ## Outline
+
+
 
 ### Breakout Room #1
 
 - Set up the MCP server with OAuth and the product database
 - Explore the MCP tools: `list_products`, `get_product`, `add_to_cart`, `view_cart`, `remove_from_cart`, `checkout`
 
+
+
 ### Breakout Room #2
 
 - Connect an MCP client to the server
 - Build an end-to-end interaction flow using the MCP tools
+
+
 
 ## Ship
 
@@ -108,6 +122,8 @@ The completed MCP server and client integration!
 - A short Loom of either:
   - the MCP server you built and a demo of the client interacting with it; or
   - the notebook you created for the Advanced Build
+
+
 
 ## Share
 
@@ -137,7 +153,9 @@ Shout out to @AIMakerspace !
 Feel free to reach out if you're curious or would like to collaborate on similar projects! 🤝🔥
 ```
 
-## Submitting Your Homework 
+
+
+## Submitting Your Homework
 
 Follow these steps to prepare and submit your homework assignment:
 
@@ -147,7 +165,11 @@ Follow these steps to prepare and submit your homework assignment:
 4. Test all available tools: browsing products, adding to cart, viewing cart, removing items, and checkout
 5. Record a Loom video reviewing what you have learned from this session
 
+
+
 ## Questions
+
+
 
 ### Question #1
 
@@ -155,7 +177,9 @@ Why is OAuth important for MCP servers, and what security considerations should 
 
 #### Answer
 
-_(insert your answer here)_
+OAuth is important because MCP tools can take actions for a user, like adding items to a cart or checking out. OAuth makes sure the client has permission to use those tools.
+
+Security considerations include using limited scopes, short-lived tokens, trusted redirect URLs, and protecting user data. Secrets like API keys or tokens should never be exposed.
 
 ### Question #2
 
@@ -163,11 +187,17 @@ What is Streamable HTTP transport in MCP, and why might you expose a server publ
 
 #### Answer
 
-_(insert your answer here)_
+Streamable HTTP lets an MCP client connect to a server over a URL instead of only through a local terminal process.
+
+This is useful for remote clients like ChatGPT or Claude. If the server is public, OAuth helps protect it, but the server also needs HTTPS, correct issuer URLs, and careful tool permissions.
 
 ## Activity 1: Extend the MCP Server
 
 Add at least one new tool to the cat shop MCP server (e.g., `search_products`, `update_cart_quantity`, or `get_order_history`). Ensure the new tool integrates properly with the existing database and OAuth authentication. Demo the new tool through an MCP client and include it in your Loom video.
+
+Note:
+
+I extended the Cat Shop MCP server with a search_products tool. It searches product names, descriptions, and categories. I tested it through the MCP client along with the original tools for listing products, adding to cart, viewing cart, and checkout.
 
 ## Advanced Activity: Build a Custom MCP Client
 
