@@ -54,6 +54,32 @@ async def get_product(product_id: int) -> dict:
         "category": row[4],
     }
 
+@mcp.tool()
+async def search_products(query: str) -> list[dict]:
+    """Search cat shop products by keyword in the name, description, or category."""
+    db = await oauth_provider._get_db()
+    search_term = f"%{query.lower()}%"
+
+    cursor = await db.execute(
+        """SELECT id, name, description, price, category
+           FROM products
+           WHERE lower(name) LIKE ?
+              OR lower(description) LIKE ?
+              OR lower(category) LIKE ?""",
+        (search_term, search_term, search_term),
+    )
+    rows = await cursor.fetchall()
+
+    return [
+        {
+            "id": r[0],
+            "name": r[1],
+            "description": r[2],
+            "price": r[3],
+            "category": r[4],
+        }
+        for r in rows
+    ]
 
 @mcp.tool()
 async def add_to_cart(product_id: int, quantity: int = 1) -> dict:
