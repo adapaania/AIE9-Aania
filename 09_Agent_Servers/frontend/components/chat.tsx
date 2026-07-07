@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useStream } from "@langchain/react";
 import {
   Bot,
   FileText,
@@ -21,7 +20,13 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { getMessageText, toolLabel } from "@/lib/messages";
 
-type StreamMessage = ReturnType<typeof useStream>["messages"][number];
+type StreamMessage = {
+  id?: string;
+  type: "human" | "ai" | "tool" | string;
+  content: unknown;
+  name?: string;
+  tool_calls?: Array<{ name?: string; id?: string }>;
+};
 
 const SUGGESTIONS = [
   "How often should I deworm my cat?",
@@ -40,9 +45,10 @@ export function Chat({ assistantId }: { assistantId: string }) {
     typeof window === "undefined"
       ? "http://localhost:3000/api"
       : new URL("/api", window.location.origin).toString();
-  const stream = useStream({ apiUrl, assistantId });
-  const { messages, isLoading, error } = stream;
 
+  const [messages, setMessages] = useState<StreamMessage[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<unknown>(null);
   const [input, setInput] = useState("");
   const endRef = useRef<HTMLDivElement>(null);
 
@@ -50,11 +56,77 @@ export function Chat({ assistantId }: { assistantId: string }) {
     endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   }, [messages, isLoading]);
 
-  const send = (text: string) => {
+  const send = async (text: string) => {
     const content = text.trim();
     if (!content || isLoading) return;
-    stream.submit({ messages: [{ type: "human", content }] });
+    setError(null);
+    setIsLoading(true);
+    setMessages((current) => [
+      ...current,
+      { type: "human", content, id: crypto.randomUUID() },
+    ]);
     setInput("");
+
+    try {
+      const threadResponse = await fetch(`${apiUrl}/threads`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({}),
+      });
+
+      if (!threadResponse.ok) {
+        throw new Error(`Could not create thread: ${threadResponse.status}`);
+      }
+
+      const thread = (await threadResponse.json()) as { thread_id: string };
+      const runResponse = await fetch(
+        `${apiUrl}/threads/${thread.thread_id}/runs/stream`,
+        {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            assistant_id: assistantId,
+            input: { messages: [{ role: "human", content }] },
+            stream_mode: "values",
+          }),
+        }
+      );
+
+      if (!runResponse.ok || !runResponse.body) {
+        throw new Error(`Agent run failed: ${runResponse.status}`);
+      }
+
+      const reader = runResponse.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+
+        const events = buffer.split("\n\n");
+        buffer = events.pop() ?? "";
+
+        for (const event of events) {
+          const dataLine = event
+            .split("\n")
+            .find((line) => line.startsWith("data: "));
+          if (!dataLine) continue;
+
+          const payload = JSON.parse(dataLine.slice(6)) as {
+            messages?: StreamMessage[];
+          };
+          if (payload.messages?.length) {
+            setMessages(payload.messages);
+          }
+        }
+      }
+    } catch (e) {
+      setError(e);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const onSubmit = (e: React.FormEvent) => {
