@@ -21,8 +21,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { getMessageText, toolLabel } from "@/lib/messages";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "/api";
-
 type StreamMessage = ReturnType<typeof useStream>["messages"][number];
 
 const SUGGESTIONS = [
@@ -38,7 +36,11 @@ function toolIcon(name?: string) {
 }
 
 export function Chat({ assistantId }: { assistantId: string }) {
-  const stream = useStream({ apiUrl: API_URL, assistantId });
+  const apiUrl =
+    typeof window === "undefined"
+      ? "http://localhost:3000/api"
+      : new URL("/api", window.location.origin).toString();
+  const stream = useStream({ apiUrl, assistantId });
   const { messages, isLoading, error } = stream;
 
   const [input, setInput] = useState("");
