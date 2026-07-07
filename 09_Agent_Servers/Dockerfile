@@ -17,4 +17,4 @@ COPY data ./data
 
 RUN uv sync --frozen
 
-CMD sh -c 'printf "OPENAI_API_KEY=%s\nTAVILY_API_KEY=%s\nLANGSMITH_API_KEY=%s\nLANGSMITH_TRACING=%s\nOPENAI_CHAT_MODEL=%s\nOPENAI_EMBEDDING_MODEL=%s\nRAG_DATA_DIR=data\n" "$OPENAI_API_KEY" "$TAVILY_API_KEY" "$LANGSMITH_API_KEY" "${LANGSMITH_TRACING:-true}" "${OPENAI_CHAT_MODEL:-gpt-5.4-mini}" "${OPENAI_EMBEDDING_MODEL:-text-embedding-3-small}" > .env && uv run langgraph dev --host 0.0.0.0 --port ${PORT}'
+CMD sh -c 'printf "OPENAI_API_KEY=%s\nTAVILY_API_KEY=%s\nLANGSMITH_API_KEY=%s\nLANGSMITH_TRACING=%s\nOPENAI_CHAT_MODEL=%s\nOPENAI_EMBEDDING_MODEL=%s\nRAG_DATA_DIR=data\n" "$OPENAI_API_KEY" "$TAVILY_API_KEY" "$LANGSMITH_API_KEY" "${LANGSMITH_TRACING:-true}" "${OPENAI_CHAT_MODEL:-gpt-4o-mini}" "${OPENAI_EMBEDDING_MODEL:-text-embedding-3-small}" > .env && uv run langgraph dev --host 0.0.0.0 --port ${PORT}'
