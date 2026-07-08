@@ -23,4 +23,8 @@ dependencies = [
     "python-dotenv>=1.2.2",
     "langgraph-cli>=0.4.14",
     "langgraph-api>=0.4.28",
+    "ragas>=0.4.3",
+    "datasets>=5.0.0",
+    "langsmith>=0.9.8",
+    "langchain-google-vertexai>=3.2.4",
 ]
