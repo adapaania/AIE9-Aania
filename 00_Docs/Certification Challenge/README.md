@@ -2,7 +2,7 @@
 
 Submission From: https://forms.gle/xtM9F38nfRKcdjH97
 
-Due: 7pm ET 7/14
+Due: 7pm ET 7/16
 
 # Overview
 
@@ -18,7 +18,7 @@ How can you build 🏗️, ship 🚢, and share 🚀 your way towards achieving
 
 It all starts now, with the Certification Challenge, which is the next step towards continuing your journey to Demo Day!
 
-**Your Certification Challenge is due Tuesday, July 14th.**
+**Your Certification Challenge is due Tuesday, July 16th.**
 
 >[!Note]
 💡Remember, *you know enough already to be dangerous*. You already know enough of the concepts and code you need to build, ship, and share production AI applications! 
