@@ -1,6 +1,7 @@
 # The Certification Challenge v1.0
 
-Submission From: https://forms.gle/xtM9F38nfRKcdjH97
+[Submission From](https://docs.google.com/forms/d/e/1FAIpQLSfVl-bXwO_NlkleaLtSQ1yp2tLM8EM3w5AukRLbP637Dg8_8Q/viewform?usp=publish-editor)  
+[Grading Rubric for reference](https://docs.google.com/spreadsheets/d/1_sV7MuHj674BikQ4Fe1QYiGVUTaBybL3ND5IN2ILq3Q/edit?usp=sharing)
 
 Due: 7pm ET 7/16
 
