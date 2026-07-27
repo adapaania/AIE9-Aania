@@ -4,7 +4,7 @@
 
 | 📰 Session Sheet | ⏺️ Recording | 🖼️ Slides | 👨‍💻 Repo | 📝 Homework | 📁 Feedback |
 |:----------------|:------------|:----------|:---------|:-----------|:-----------|
-| []() | []() | []() | []() | []() | []() |
+| [Session 14: Multimodal RAG](https://github.com/AI-Maker-Space/The-AI-Engineering-Certification-v1.0/tree/main/00_Docs/Modules/14_Multimodal_RAG) |[Recording!](https://us02web.zoom.us/rec/share/NgVURG6fXmnx1yaD_v59EwLOXGkSsqDVbfZ0-1PLajEFKYAWvSx910wXw14TybrY.tIE0_dv0mi-zZZBF) <br> passcode: `f8Vf*kFB`| [Session 14 Slides](https://canva.link/7v6gl0p4htce5ib) | You are here! | [Session 14 Assignment](https://forms.gle/2p6KYF56ejSF1dyQ9) | [Feedback 7/16](https://forms.gle/6GCcwo1nF4oi8epp9) |
 
 **⚠️!!! This session makes real API calls and the first CLIP run downloads a ~600 MB model. Your `OPENAI_API_KEY` lives in `.env` — never commit it !!!⚠️**
 
