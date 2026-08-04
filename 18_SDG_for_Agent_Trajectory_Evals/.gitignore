@@ -1,0 +1,7 @@
+# Notebook artifacts
+artifacts/
+
+# Environment
+.env
+.venv/
+__pycache__/
